@@ -3,6 +3,8 @@ import { query } from '../db/connection';
 import { authenticate, AuthRequest } from '../middleware/auth';
 import { AppError } from '../middleware/errorHandler';
 import { z } from 'zod';
+import { upload, parseRouteFile } from '../utils/fileUpload';
+import { calculateRouteDistance, calculateRouteDuration } from '../utils/routeCalculations';
 
 const router = express.Router();
 
