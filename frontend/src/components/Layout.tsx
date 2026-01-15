@@ -33,6 +33,9 @@ export default function Layout() {
           <Link to="/pricing" style={{ color: 'white', textDecoration: 'none', padding: '10px' }}>
             Pricing
           </Link>
+          <Link to="/analytics" style={{ color: 'white', textDecoration: 'none', padding: '10px' }}>
+            Analytics
+          </Link>
         </nav>
         <div style={{ marginTop: 'auto', paddingTop: '30px' }}>
           <p style={{ marginBottom: '10px' }}>{operator?.name}</p>

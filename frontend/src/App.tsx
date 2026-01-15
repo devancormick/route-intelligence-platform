@@ -6,6 +6,7 @@ import Dashboard from './pages/Dashboard'
 import RoutesPage from './pages/Routes'
 import JobsPage from './pages/Jobs'
 import PricingPage from './pages/Pricing'
+import Analytics from './pages/Analytics'
 import Layout from './components/Layout'
 
 function PrivateRoute({ children }: { children: React.ReactNode }) {
@@ -31,6 +32,7 @@ function App() {
           <Route path="routes" element={<RoutesPage />} />
           <Route path="jobs" element={<JobsPage />} />
           <Route path="pricing" element={<PricingPage />} />
+          <Route path="analytics" element={<Analytics />} />
         </Route>
       </Routes>
     </Router>
