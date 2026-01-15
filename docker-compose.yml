@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgis/postgis:14-3.3
+    container_name: route-intelligence-db
+    environment:
+      POSTGRES_USER: route_user
+      POSTGRES_PASSWORD: route_password
+      POSTGRES_DB: route_intelligence
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U route_user"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: route-intelligence-backend
+    ports:
+      - "3001:3001"
+    environment:
+      NODE_ENV: development
+      DATABASE_URL: postgresql://route_user:route_password@postgres:5432/route_intelligence
+      MAPBOX_ACCESS_TOKEN: ${MAPBOX_ACCESS_TOKEN}
+      GOOGLE_MAPS_API_KEY: ${GOOGLE_MAPS_API_KEY}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+
+  optimization:
+    build:
+      context: ./optimization
+      dockerfile: Dockerfile
+    container_name: route-intelligence-optimization
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://route_user:route_password@postgres:5432/route_intelligence
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./optimization:/app
+
+volumes:
+  postgres_data:
