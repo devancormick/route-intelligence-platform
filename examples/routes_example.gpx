@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Route Intelligence Platform">
+  <wpt lat="39.0997" lon="-94.5795">
+    <name>Customer A</name>
+    <desc>123 Main St, Kansas City, MO 64108</desc>
+    <extensions>
+      <service_type>lawn_mowing</service_type>
+      <duration>30</duration>
+    </extensions>
+  </wpt>
+  <wpt lat="39.1097" lon="-94.5695">
+    <name>Customer B</name>
+    <desc>456 Oak Ave, Kansas City, MO 64109</desc>
+    <extensions>
+      <service_type>lawn_mowing</service_type>
+      <duration>45</duration>
+    </extensions>
+  </wpt>
+  <wpt lat="39.1197" lon="-94.5595">
+    <name>Customer C</name>
+    <desc>789 Pine Rd, Kansas City, MO 64110</desc>
+    <extensions>
+      <service_type>edging</service_type>
+      <duration>20</duration>
+    </extensions>
+  </wpt>
+  <wpt lat="39.1297" lon="-94.5495">
+    <name>Customer D</name>
+    <desc>321 Elm St, Kansas City, MO 64111</desc>
+    <extensions>
+      <service_type>lawn_mowing</service_type>
+      <duration>35</duration>
+    </extensions>
+  </wpt>
+</gpx>

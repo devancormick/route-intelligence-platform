@@ -1,0 +1,57 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.5795, 39.0997]
+      },
+      "properties": {
+        "name": "Customer A",
+        "address": "123 Main St, Kansas City, MO 64108",
+        "service_type": "lawn_mowing",
+        "duration": 30
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.5695, 39.1097]
+      },
+      "properties": {
+        "name": "Customer B",
+        "address": "456 Oak Ave, Kansas City, MO 64109",
+        "service_type": "lawn_mowing",
+        "duration": 45
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.5595, 39.1197]
+      },
+      "properties": {
+        "name": "Customer C",
+        "address": "789 Pine Rd, Kansas City, MO 64110",
+        "service_type": "edging",
+        "duration": 20
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.5495, 39.1297]
+      },
+      "properties": {
+        "name": "Customer D",
+        "address": "321 Elm St, Kansas City, MO 64111",
+        "service_type": "lawn_mowing",
+        "duration": 35
+      }
+    }
+  ]
+}

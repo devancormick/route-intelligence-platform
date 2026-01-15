@@ -1,0 +1,6 @@
+latitude,longitude,address,service_type,estimated_duration_minutes,name
+39.0997,-94.5795,"123 Main St, Kansas City, MO 64108",lawn_mowing,30,"Customer A"
+39.1097,-94.5695,"456 Oak Ave, Kansas City, MO 64109",lawn_mowing,45,"Customer B"
+39.1197,-94.5595,"789 Pine Rd, Kansas City, MO 64110",edging,20,"Customer C"
+39.1297,-94.5495,"321 Elm St, Kansas City, MO 64111",lawn_mowing,35,"Customer D"
+39.1397,-94.5395,"654 Maple Dr, Kansas City, MO 64112",trimming,25,"Customer E"
