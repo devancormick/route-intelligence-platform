@@ -25,10 +25,7 @@ docker exec -i route-intelligence-db psql -U route_user -d route_intelligence < 
 
 # 5. Create test user
 echo "👤 Creating test user..."
-cd backend
-export DATABASE_URL=postgresql://route_user:route_password@localhost:5432/route_intelligence
-node ../scripts/create_test_user.js
-cd ..
+docker exec -i route-intelligence-db psql -U route_user -d route_intelligence < database/seed_test_user.sql
 
 echo ""
 echo "✅ Setup complete!"

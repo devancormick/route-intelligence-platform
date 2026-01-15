@@ -3,7 +3,14 @@
 /**
  * Script to create a test user with known credentials
  * Usage: node scripts/create_test_user.js
+ * 
+ * Note: This script should be run from the backend directory where pg and bcryptjs are installed
  */
+
+const path = require('path');
+
+// Change to backend directory to access node_modules
+process.chdir(path.join(__dirname, '..', 'backend'));
 
 const { Pool } = require('pg');
 const bcrypt = require('bcryptjs');
