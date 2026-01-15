@@ -11,7 +11,10 @@ import jobRoutes from './routes/jobs';
 import optimizationRoutes from './routes/optimization';
 import pricingRoutes from './routes/pricing';
 import mapRoutes from './routes/maps';
+import ocrRoutes from './routes/ocr';
+import analyticsRoutes from './routes/analytics';
 import { rateLimiter } from './middleware/rateLimiter';
+import httpServer from './server';
 
 dotenv.config();
 
@@ -38,12 +41,14 @@ app.use('/api/jobs', jobRoutes);
 app.use('/api/optimize', optimizationRoutes);
 app.use('/api/pricing', pricingRoutes);
 app.use('/api/maps', mapRoutes);
+app.use('/api/ocr', ocrRoutes);
+app.use('/api/analytics', analyticsRoutes);
 
 // Error handling
 app.use(errorHandler);
 
 // Start server
-app.listen(PORT, () => {
+httpServer.listen(PORT, () => {
   logger.info(`Server running on port ${PORT}`);
 });
 
